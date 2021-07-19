@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form name="user" method="post">
+            {{ form_row(form.first_name, {'attr' : {'placeholder' : 'First Name', 'class': 'form-control-lg'}}) }}
+            {{ form_row(form.last_name, {'attr' : {'placeholder' : 'Last Name', 'class': 'form-control-lg'}}) }}
+            {{ form_row(form.email, {'attr' : {'placeholder' : 'Email', 'class': 'form-control-lg'}}) }}
+            {{ form_row(form.plainPassword.first, {'attr' : {'placeholder' : 'Password', 'class': 'form-control-lg'}}) }}
+            {{ form_row(form.plainPassword.second, {'attr' : {'placeholder' : 'Repeat Password', 'class': 'form-control-lg'}}) }}
+            {{ form_row(form._token) }}
+            <button class="btn btn-lg" type="submit">Register</button>
+        </form>
+    </div>
+{% endblock %}
