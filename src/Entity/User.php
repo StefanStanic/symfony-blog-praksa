@@ -41,6 +41,12 @@ class User implements UserInterface
 
     private $plainPassword;
 
+    /**
+     * @ORM\Column(type="json")
+     * @var array
+     */
+    private $roles = [];
+
     public function getId(): ?int
     {
         return $this->id;
@@ -96,7 +102,16 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        $roles = $this->roles;
+        $roles[] = 'ROLE_USER';
+
+        return $roles;
+    }
+
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+        return $this;
     }
 
     public function getSalt()
@@ -119,6 +134,11 @@ class User implements UserInterface
         // TODO: Implement @method string getUserIdentifier()
     }
 
+    public function getUserIdentifier()
+    {
+        return $this->email;
+    }
+    
     /**
      * @return mixed
      */
