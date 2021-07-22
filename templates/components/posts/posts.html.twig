@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="container d-flex flex-wrap justify-content-center">
+        {% for post in posts %}
+            {% include 'components/posts/post_card.html.twig' with {'post' : post}%}
+        {% endfor %}
+    </div>
+{% endblock %}

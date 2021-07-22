@@ -41,7 +41,7 @@ class SecurityController extends AbstractController
     }
 
     /**
-     * @Route("/register")
+     * @Route("/register", name="app_register")
      * @author Stefan Stanic <stefan.stanic@infostud.com>
      */
     public function register(Request $request)
