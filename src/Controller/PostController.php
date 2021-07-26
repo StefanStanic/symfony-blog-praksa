@@ -36,6 +36,7 @@ class PostController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/post/delete", name="app_delete_post", methods={"POST"})
      * @author Stefan Stanic <stefan.stanic@infostud.com>

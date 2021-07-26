@@ -5,7 +5,7 @@
         <p class="card-text">{{ post.shortText }}.</p>
         <div>
             <button class="btn btn-danger delete_post" data-id="{{ post.id }}">Delete</button>
-            <button class="btn btn-warning">Edit</button>
+            <button class="btn btn-warning update_post" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="{{ post.title }}" data-short-text="{{ post.shortText }}">Edit</button>
         </div>
     </div>
 </div>
