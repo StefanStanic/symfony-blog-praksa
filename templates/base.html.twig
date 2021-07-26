@@ -8,14 +8,14 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('base') }}
         {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('base') }}
-        {% endblock %}
     </head>
     <body>
         {% block body %}
             {% include 'components/navigation.html.twig' %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('base') }}
         {% endblock %}
     </body>
 </html>

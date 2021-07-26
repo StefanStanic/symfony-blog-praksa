@@ -3,5 +3,9 @@
     <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text">{{ post.shortText }}.</p>
+        <div>
+            <button class="btn btn-danger delete_post" data-id="{{ post.id }}">Delete</button>
+            <button class="btn btn-warning">Edit</button>
+        </div>
     </div>
 </div>

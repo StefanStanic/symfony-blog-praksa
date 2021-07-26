@@ -22,6 +22,8 @@ class PostRepository extends ServiceEntityRepository
     public function getAllPosts()
     {
         return $this->createQueryBuilder('post')
+            ->where('post.deleted = :val')
+            ->setParameter('val', '0')
             ->orderBy('post.id', 'DESC')
             ->getQuery()
             ->getResult();

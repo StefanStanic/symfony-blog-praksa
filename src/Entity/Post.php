@@ -42,6 +42,11 @@ class Post
      */
     private $date_updated;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $deleted = 0;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Post
     public function setDateUpdated(\DateTimeInterface $date_updated): self
     {
         $this->date_updated = $date_updated;
+
+        return $this;
+    }
+
+    public function getDeleted(): ?int
+    {
+        return $this->deleted;
+    }
+
+    public function setDeleted(int $deleted): self
+    {
+        $this->deleted = $deleted;
 
         return $this;
     }
